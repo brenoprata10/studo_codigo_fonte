@@ -45,7 +45,28 @@
 
         <p-column header="Ações" styleClass="col-acoes">
           <ng-template let-disciplina="rowData" pTemplate="body">
-            <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top" (click)="editar(disciplina)"></a>
+
+
+            <a pButton icon="fa-pencil" pTooltip="TESTES" tooltipPosition="top" (click)="teste(disciplina)"></a>
+
+            <div id="conteudo" *ngIf="exibirhambuerger && disciplina.codigo === cod" style="position: absolute; margin-top: -40px; margin-left: -50px">
+
+              <div>
+                <a (click)="editar(disciplina)">Link 1</a>
+              </div>
+              <div>
+                <a (click)="editar(disciplina)">Link 1</a>
+              </div>
+              <div>
+                <a (click)="editar(disciplina)">Link 1</a>
+              </div>
+
+            </div>
+
+
+            <!-- <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top" (click)="editar(disciplina)"></a> -->
+
+
           </ng-template>
         </p-column>
       </p-dataTable>

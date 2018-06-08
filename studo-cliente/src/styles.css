@@ -19,7 +19,7 @@ body{
   }
 
   .col-acoes{
-    width: 150px;
+    width: 85px;
     text-align: center;
   }
   .col-codigo{
@@ -53,6 +53,20 @@ body{
     bottom:0;
     width:98%;
   }
+
+  a {
+    text-decoration: none;
+   }
+
+  a:hover {
+    text-decoration: underline;
+   }
+
+   a:hover {
+    color: #F00;
+   }
+
+
 
 
 

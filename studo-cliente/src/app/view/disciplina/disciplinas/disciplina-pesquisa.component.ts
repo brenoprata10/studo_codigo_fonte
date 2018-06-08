@@ -22,6 +22,8 @@ export class DisciplinaPesquisaComponent {
   disciplinas = [];
   @ViewChild('tabela') grid;
   display: boolean;
+  exibirhambuerger: boolean;
+  cod: number;
 
   constructor(
     private disciplinaService: DisciplinaService,
@@ -35,6 +37,11 @@ export class DisciplinaPesquisaComponent {
         this.totalRegistros = resultado.total;
         this.disciplinas = resultado.disciplinas;
       }).catch(erro => this.errorHandle.handle(erro));
+  }
+
+  teste(dis: any) {
+    this.exibirhambuerger = !this.exibirhambuerger;
+    this.cod = dis.codigo;
   }
 
   mudarPagina(event: LazyLoadEvent) {
